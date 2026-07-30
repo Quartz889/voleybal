@@ -19,7 +19,7 @@ const config = {
 		}),
 		// THIS is the critical addition for your subpath deployment
 		paths: {
-			base: dev ? '' : '/voleybal' // Replace 'voleybal' if your repo name is different
+			base: '' // Replace 'voleybal' if your repo name is different
 		}
 	}
 };
