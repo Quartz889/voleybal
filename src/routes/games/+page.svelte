@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { base } from '$app/paths';
 
   let allGames: any[] = $state([]);
   let allTeams: any[] = $state([]);
@@ -115,7 +116,7 @@
 <main class="games-container">
   <header>
     <div class="top-nav">
-      <a href="/" class="back-link">← Atgal</a>
+      <a href="{base}" class="back-link">← Atgal</a>
       <div class="key-input">
         <span>Key:</span>
         <input
