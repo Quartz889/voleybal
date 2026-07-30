@@ -18,20 +18,22 @@ jobs:
   build_site:
     runs-on: ubuntu-latest
     steps:
+      # 1. Upgrade checkout from v4 to v5
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      # pnpm setup – active and uncommented
+      # 2. Upgrade pnpm/action-setup from v3 to v6
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v6
         with:
           version: 8
 
+      # 3. Upgrade setup-node from v4 to v5
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
-          cache: 'pnpm'  # uses pnpm's lockfile
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
