@@ -5,7 +5,7 @@
 
   async function addTeam() {
     if (!newTeamName) return;
-    const res = await fetch("http://139.162.165.230/teams?key=" + password, {
+    const res = await fetch("https://api.quartzdev.cc/teams?key=" + password, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: newTeamName }),
@@ -19,7 +19,7 @@
   }
 
   async function fetchTeams() {
-    const res = await fetch("http://139.162.165.230/teams/get");
+    const res = await fetch("https://api.quartzdev.cc/teams/get");
     if (res.ok) teams = await res.json();
   }
 

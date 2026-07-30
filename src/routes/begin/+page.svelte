@@ -25,7 +25,7 @@
   let t1s3 = $state("");
   let t2s3 = $state("");
 
-  const API_BASE = "http://localhost:8000";
+  const API_BASE = "https://api.quartzdev.cc";
 
   async function loadData() {
     const [tRes, gRes] = await Promise.all([
